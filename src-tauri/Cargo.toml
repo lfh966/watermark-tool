@@ -1,0 +1,19 @@
+[package]
+name = "watermark-tool"
+version = "1.0.0"
+description = "图片水印与长图拼接工具（本地运行）"
+authors = ["lfh966"]
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

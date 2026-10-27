@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141c33"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8fb2ff"/>
+      <stop offset="100%" stop-color="#5b7cff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="28%" cy="18%" r="82%">
+      <stop offset="0%" stop-color="#5b7cff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#5b7cff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+
+  <!-- 圆角底 + 毛玻璃光晕 -->
+  <rect width="512" height="512" rx="114" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="114" fill="url(#glow)"/>
+  <circle cx="140" cy="128" r="86" fill="#7aa2ff" opacity="0.32" filter="url(#blur)"/>
+  <circle cx="386" cy="372" r="104" fill="#a07aff" opacity="0.24" filter="url(#blur)"/>
+
+  <!-- 底层照片卡（毛玻璃感） -->
+  <rect x="128" y="106" width="250" height="196" rx="30"
+        fill="#ffffff" opacity="0.13" transform="rotate(-9 253 204)"/>
+
+  <!-- 顶层照片卡 -->
+  <rect x="138" y="148" width="250" height="196" rx="30"
+        fill="#ffffff" opacity="0.22"/>
+  <rect x="138" y="148" width="250" height="196" rx="30"
+        fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="3"/>
+
+  <!-- 卡内“风景” -->
+  <path d="M162 320 L234 232 L288 298 L324 254 L366 320 Z"
+        fill="url(#accent)" opacity="0.95"/>
+  <circle cx="332" cy="196" r="17" fill="#ffd88a"/>
+
+  <!-- 水印印章 -->
+  <g transform="translate(348 334)">
+    <circle cx="0" cy="0" r="78" fill="url(#accent)"/>
+    <circle cx="0" cy="0" r="78" fill="none"
+            stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+    <path d="M0 -42 C 23 -14, 38 3, 38 20 A 38 38 0 1 1 -38 20 C -38 3, -23 -14, 0 -42 Z"
+          fill="#ffffff"/>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# 日志 / 编辑器
+*.log
+.vscode/
+.idea/
+
+# 前端依赖与构建产物
+node_modules/
+dist/
+
+# Tauri
+src-tauri/target/
+src-tauri/gen/schemas/
+
+# 本地临时文件
+.tmp/
